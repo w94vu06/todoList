@@ -14,4 +14,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::any('/', [TestController::class, 'test']);
+Route::any('/test', [TestController::class, 'test']);
+Route::get('/snail',[TestController::class,'snail']);

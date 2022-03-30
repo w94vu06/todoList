@@ -10,4 +10,8 @@ class TestController extends Controller
     {
         return "OK" ;
     }
+    public function snail()
+    {
+        return "snail say hi";
+    }
 }
