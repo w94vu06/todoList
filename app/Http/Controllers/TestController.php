@@ -15,4 +15,8 @@ class TestController extends Controller
     {
         return "snail say hi";
     }
+    public function master()
+    {
+        return view('layout.master') ;
+    }
 }
