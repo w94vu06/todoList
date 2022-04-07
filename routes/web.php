@@ -23,15 +23,15 @@ Route::get('/snail_index',[\App\Http\Controllers\SnailController::class,'index']
     ->name('snail_index');
 
 //新增
-Route::get('/create', [\App\Http\Controllers\SnailController::class, 'get_create_page'])
+Route::get('/snail_create', [\App\Http\Controllers\SnailController::class, 'get_create_page'])
     ->name('get_create_page');
-Route::post('/create', [\App\Http\Controllers\SnailController::class, 'store_create_data'])
+Route::post('/snail_create', [\App\Http\Controllers\SnailController::class, 'store_create_data'])
     ->name('store_create_data');
 
 //修改
-Route::get('/update', [\App\Http\Controllers\SnailController::class, 'get_edit_page'])
+Route::get('/snail_update', [\App\Http\Controllers\SnailController::class, 'get_edit_page'])
     ->name('get_edit_page');
-Route::post('/update', [\App\Http\Controllers\SnailController::class, 'store_edit_data'])
+Route::post('/snail_update', [\App\Http\Controllers\SnailController::class, 'store_edit_data'])
     ->name('store_edit_data');
 
 //刪除

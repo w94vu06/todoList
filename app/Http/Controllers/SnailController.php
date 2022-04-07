@@ -16,7 +16,7 @@ class SnailController extends Controller
 
     //進入新增頁面
     public function get_create_page(){
-        return view('pages.create');
+        return view('pages.snail_create');
     }
     //新增資料
     public function store_create_data (Request $request)
@@ -39,7 +39,7 @@ class SnailController extends Controller
             ->where('t_id', $t_id)
             ->first();
 //        dd($data);
-        return view('pages.update',compact('data',$data));
+        return view('pages.snail_update',compact('data',$data));
     }
     public function store_edit_data(Request $request)
     {
