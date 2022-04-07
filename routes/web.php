@@ -15,5 +15,25 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::any('/test', [TestController::class, 'test']);
-Route::get('/snail',[TestController::class,'snail']);
 Route::get('/master',[TestController::class,'master']);
+
+//【Snail Part】
+//主頁面
+Route::get('/snail_index',[\App\Http\Controllers\SnailController::class,'index'])
+    ->name('snail_index');
+
+//新增
+Route::get('/create', [\App\Http\Controllers\SnailController::class, 'get_create_page'])
+    ->name('get_create_page');
+Route::post('/create', [\App\Http\Controllers\SnailController::class, 'store_create_data'])
+    ->name('store_create_data');
+
+//修改
+Route::get('/update', [\App\Http\Controllers\SnailController::class, 'get_edit_page'])
+    ->name('get_edit_page');
+Route::post('/update', [\App\Http\Controllers\SnailController::class, 'store_edit_data'])
+    ->name('store_edit_data');
+
+//刪除
+Route::get('/delete/', [\App\Http\Controllers\SnailController::class, 'delete_data'])
+    ->name('delete_data');

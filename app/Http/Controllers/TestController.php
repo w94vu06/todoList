@@ -11,12 +11,9 @@ class TestController extends Controller
         return view('welcome') ;
         return "OK" ;
     }
-    public function snail()
-    {
-        return "snail say hi";
-    }
+
     public function master()
     {
-        return view('layout.master') ;
+        return view('layouts.master') ;
     }
 }
